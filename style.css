@@ -1,0 +1,22 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0;
+    padding:0;
+    width: 800px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.square{
+    flex:auto;
+    border: 1px solid rgb(223, 188, 188);
+}
+
+.addColor {
+    background-color: black;
+}
