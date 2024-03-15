@@ -14,8 +14,9 @@ function createNewGrid(gridSize=16){
 
 
     document.querySelectorAll('.square').forEach(function(item) {
-    item.addEventListener('mouseover', function() {
-    item.classList.add("addColor");
+        item.addEventListener('mouseover', function() {
+            // item.classList.add("addColor");
+            item.style.backgroundColor=pickRandomColor();
     });
 });
 
@@ -33,3 +34,16 @@ resetGrid.addEventListener('click', () =>{
         } 
 
 });
+
+function pickRandomColor(){
+    let colorR = getRandomInt(256);
+    let colorG = getRandomInt(256);
+    let colorB = getRandomInt(256);
+    return ("rgb(" +colorR + "," +colorG +"," + colorB + ")");
+
+}
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
